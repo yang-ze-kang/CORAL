@@ -138,7 +138,7 @@ python skeleton.py \
   --skip_existing
 ```
 
-`neuTube`, `APP2` and `smartTrace` call the local Vaa3D service in `TraceAPI`. Start the API before using those methods:
+`neuTube`, `APP2` and `smartTrace` call the local service in `TraceAPI`. Start the API before using those methods:
 
 ```bash
 cd TraceAPI
