@@ -1,0 +1,5 @@
+_target_: loss.focal_tversky.FocalTverskyLoss
+alpha: 0.2
+beta: 0.8
+gamma: 2.0
+smooth: 1.0

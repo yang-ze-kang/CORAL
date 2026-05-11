@@ -1,0 +1,7 @@
+defaults:
+  - C2_seg_base
+  - model: dynunet
+  - _self_
+
+# logging
+run_name: dynunet-dice

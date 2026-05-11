@@ -1,0 +1,11 @@
+__pycache__
+runs
+*.pyc
+*.pkl
+*.pth
+.DS_Store
+*.egg-info/
+outputs/
+logs/
+.hydra/
+wandb/

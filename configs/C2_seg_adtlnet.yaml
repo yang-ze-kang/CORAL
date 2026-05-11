@@ -1,0 +1,12 @@
+defaults:
+  - C2_seg_base
+  - model: adtlnet
+  - override trainer/lightning_module/loss: adtl_dice_loss
+  - _self_
+
+run_name: adtlnet-dice
+
+data:
+  dataset_dir: /data2/C2/cubes1937
+  train:
+    snr_threshold: 1.492537

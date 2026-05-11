@@ -1,0 +1,19 @@
+defaults:
+  - segmentation
+  - _self_
+
+lightning_trainer:
+  val_check_interval: 500
+  max_steps: 10000
+
+lightning_module:
+  scheduler_configs:
+    linear_warmup:
+        scheduler:
+          total_iters: 20
+    cosine_annealing:
+      interval: step
+      frequency: 10
+      scheduler:
+        T_max: 980
+        eta_min: 0.000001

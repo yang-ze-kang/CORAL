@@ -1,0 +1,6 @@
+defaults:
+  - C2_seg_base_bs1_gc4
+  - model: swin_unetr
+  - _self_
+
+run_name: swin_unetr-dice

@@ -1,0 +1,69 @@
+train:
+  _target_: dataset.CubeDataset.CubeDataset
+  mode: block
+  blocks_per_direction: 3
+  block_sample_method: random 
+  cube_size: [300,300,300] # (Z,Y,X)
+  block_size: [128,128,128] # (Z,Y,X)
+  transforms:
+    _target_: monai.transforms.Compose
+    transforms:
+      - _target_: monai.transforms.EnsureChannelFirstd
+        keys: ['image','mask']
+        channel_dim: "no_channel"
+      - _target_: monai.transforms.ScaleIntensityRanged
+        keys: ['image']
+        a_min: 0
+        a_max: 1
+        b_min: 0
+        b_max: 1
+        clip: true
+      - _target_: monai.transforms.RandFlipd
+        spatial_axis: [0,1,2]
+        keys: ['image','mask']
+      - _target_: monai.transforms.ToTensord
+        keys: ['image','mask']
+val:
+  _target_: dataset.CubeDataset.CubeDataset
+  mode: cube
+  blocks_per_direction: 3
+  block_sample_method: order 
+  cube_size: [300,300,300] # (Z,Y,X)
+  block_size: [128,128,128] # (Z,Y,X)
+  transforms:
+    _target_: monai.transforms.Compose
+    transforms:
+      - _target_: monai.transforms.EnsureChannelFirstd
+        keys: ['image','mask']
+        channel_dim: "no_channel"
+      - _target_: monai.transforms.ScaleIntensityRanged
+        keys: ['image']
+        a_min: 0
+        a_max: 1
+        b_min: 0
+        b_max: 1
+        clip: true
+      - _target_: monai.transforms.ToTensord
+        keys: ['image','mask']
+test:
+  _target_: dataset.CubeDataset.CubeDataset
+  mode: cube
+  blocks_per_direction: 3
+  block_sample_method: order 
+  cube_size: [300,300,300] # (Z,Y,X)
+  block_size: [128,128,128] # (Z,Y,X)
+  transforms:
+    _target_: monai.transforms.Compose
+    transforms:
+      - _target_: monai.transforms.EnsureChannelFirstd
+        keys: ['image','mask']
+        channel_dim: "no_channel"
+      - _target_: monai.transforms.ScaleIntensityRanged
+        keys: ['image']
+        a_min: 0
+        a_max: 1
+        b_min: 0
+        b_max: 1
+        clip: true
+      - _target_: monai.transforms.ToTensord
+        keys: ['image','mask']

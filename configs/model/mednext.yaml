@@ -1,0 +1,12 @@
+_target_: models.mednext2.MedNeXt
+in_channels: 1
+n_classes: 1
+n_channels: 32
+exp_r: [3,4,8,8,8,8,8,4,3]
+kernel_size: 3
+do_res: True
+do_res_up_down: True
+block_counts: [3,4,8,8,8,8,8,4,3]
+dim: '3d'
+checkpoint_style: "outside_block"
+grn: True

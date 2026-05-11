@@ -1,0 +1,11 @@
+Dice:
+  _target_: monai.losses.DiceCELoss
+  sigmoid: True
+  reduction: "mean"
+  squared_pred: True
+  lambda_ce: 0.0
+  lambda_dice: 1.0
+snr_classify:
+  _target_: torch.nn.BCEWithLogitsLoss
+weights: [0.8, 0.2]
+start_steps: [0, 3000]

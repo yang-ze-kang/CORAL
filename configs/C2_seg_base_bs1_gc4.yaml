@@ -1,0 +1,22 @@
+defaults:
+  - C2_seg_base
+  - _self_
+
+batch_size: 1
+
+# lightning trainer
+trainer:
+  lightning_trainer:
+    accumulate_grad_batches: 4
+    val_check_interval: 2000
+    max_steps: 10000
+  lightning_module:
+    batch_size: ${batch_size}
+    input_size: ${input_size}
+    scheduler_configs:
+      linear_warmup:
+        interval: step
+        frequency: 40
+      cosine_annealing:
+        interval: step
+        frequency: 40

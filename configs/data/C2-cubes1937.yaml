@@ -1,0 +1,18 @@
+defaults:
+  - base_cube
+  - _self_
+
+name: CH1-cubes1723
+dataset_dir: /gpfs/hulab/yangzekang/data/guolab/C2/cubes1937
+
+train:
+  dataset_dir: ${data.dataset_dir}
+  path: data_split/C2-cubes1937_tvt/train.txt
+
+val:
+  dataset_dir: ${data.dataset_dir}
+  path: data_split/C2-cubes1937_tvt/val.txt
+
+test:
+  dataset_dir: ${data.dataset_dir}
+  path: data_split/C2-cubes1937_tvt/test.txt

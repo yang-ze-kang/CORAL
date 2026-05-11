@@ -1,0 +1,6 @@
+defaults:
+  - C2_seg_base_bs1_gc4
+  - model: dscnet
+  - _self_
+
+run_name: dscnet-dice

@@ -1,0 +1,7 @@
+_target_: loss.cldice.SoftDiceclDiceLoss
+sigmoid: True
+iter_: 3
+alpha: 0.3
+smooth: 1e-5
+squared_pred: True
+clDice_start_step: 3000

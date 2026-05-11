@@ -1,0 +1,9 @@
+defaults:
+  - C2_seg_base_bs1_gc4
+  - model: mednext
+  - _self_
+
+run_name: mednext-dice
+
+data:
+  dataset_dir: /data2/C2/cubes1937

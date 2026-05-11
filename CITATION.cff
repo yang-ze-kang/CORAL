@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this software or dataset, please cite the CORAL paper. The paper is not public yet; citation metadata will be updated after release."
+type: software
+title: "CORAL: A Benchmark for Structure-aware and Brain-wide Neuron Reconstruction in Light Microscopy"
+authors:
+  - name: "CORAL contributors"
+keywords:
+  - neuron reconstruction
+  - light microscopy
+  - brain-wide tracing
+  - segmentation
+  - benchmark
+url: "https://huggingface.co/datasets/yangzekang2000/CORAL"
+version: "0.1.0"
+date-released: "2026-05-11"
+abstract: "CORAL provides code and data resources for structure-aware and brain-wide neuron reconstruction in light microscopy."

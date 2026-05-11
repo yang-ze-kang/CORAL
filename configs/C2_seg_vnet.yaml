@@ -1,0 +1,7 @@
+defaults:
+  - C2_seg_base
+  - model: vnet
+  - _self_
+
+# logging
+run_name: vnet-dice

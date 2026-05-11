@@ -1,0 +1,6 @@
+defaults:
+  - C2_seg_dynunet
+  - override trainer/lightning_module/loss: softdicle_cldice
+  - _self_
+
+run_name: dynunet-cldice-iter3

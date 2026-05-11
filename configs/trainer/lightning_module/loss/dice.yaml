@@ -1,0 +1,6 @@
+_target_: monai.losses.DiceCELoss
+sigmoid: True
+reduction: "mean"
+squared_pred: True
+lambda_ce: 0.0
+lambda_dice: 1.0

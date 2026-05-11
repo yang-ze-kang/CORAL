@@ -1,0 +1,9 @@
+defaults:
+  - C2_seg_base_bs1_gc4
+  - model: segmamba
+  - _self_
+
+run_name: segmamba-dice
+
+data:
+  dataset_dir: /data2/C2/cubes1937
