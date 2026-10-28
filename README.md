@@ -6,6 +6,10 @@
 
 Code for **CORAL: A Benchmark for Structure-aware and Brain-wide Neuron Reconstruction in Light Microscopy**.
 
+**Accepted at NeurIPS 2026.**
+
+**Paper:** [arXiv:2608.30768](https://arxiv.org/abs/2608.30768)
+
 CORAL provides training and inference code for neuron segmentation, block-level reconstruction, and brain-wide reconstruction.
 
 ## Dataset
